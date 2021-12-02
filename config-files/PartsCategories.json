@@ -1,0 +1,25 @@
+{
+  "processor": {
+    "aliases": ["cpu","proc"],
+    "Intel": [null],
+    "AMD": [null]
+  },
+  "motherboard": {
+    "aliases": ["mobo","mb"],
+    "Intel": [null],
+    "AMD": [null]
+  },
+  "gpu": {
+    "aliases": ["graphics card","vga"],
+    "NVIDIA": [null],
+    "AMD": [null]
+  },
+  "ram": {
+    "aliases": ["memory"],
+    "capacity": [4,8,16,32]
+  },
+  "storage": {
+    "formFactor": ["hdd", "ssd", "m.2"]
+  }
+
+}

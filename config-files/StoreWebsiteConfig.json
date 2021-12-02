@@ -1,0 +1,82 @@
+{
+  "dynaquestpc": {
+    "name": "DynaQuest PC",
+    "urls": {
+      "home": "https://dynaquestpc.com/",
+      "processor": "https://dynaquestpc.com/collections/processor",
+      "motherboard": "https://dynaquestpc.com/collections/motherboard",
+      "gpu": "https://dynaquestpc.com/collections/graphics-card",
+      "ram": "https://dynaquestpc.com/collections/memory",
+      "psu": "https://dynaquestpc.com/collections/power-supply",
+      "storage": "https://dynaquestpc.com/collections/hard-drive"
+    },
+    "locators": {
+      "type": "css selector",
+      "processor": null,
+      "motherboard": null,
+      "gpu": null,
+      "ram": null,
+      "psu": null,
+      "storage": null,
+      "productsOnPage": ".products .product-item-wrapper",
+      "productName": ".product-title",
+      "productPrice": ".product-price > span",
+      "productAvailable": null,
+      "nextPage": ".pagination .next a"
+    }
+  },
+  "easypc": {
+    "name": "EasyPC",
+    "urls": {
+      "home": "https://easypc.com.ph/",
+      "processor": ["https://easypc.com.ph/collections/processor-intel",
+                    "https://easypc.com.ph/collections/processor-amd"],
+      "motherboard": "https://easypc.com.ph/collections/motherboard",
+      "gpu": "https://easypc.com.ph/collections/graphic-card",
+      "ram": "https://easypc.com.ph/collections/memory",
+      "psu": "https://easypc.com.ph/collections/power-supply",
+      "storage": ["https://easypc.com.ph/collections/hard-disk",
+                  "https://easypc.com.ph/collections/solid-state-drive"]
+    },
+    "locators": {
+      "type": "css selector",
+      "processor": null,
+      "motherboard": null,
+      "gpu": null,
+      "ram": null,
+      "psu": null,
+      "storage": null,
+      "productsOnPage": ".bc-sf-filter-product-item > script[type=\"application/json\"]",
+      "productName": null,
+      "productPrice": null,
+      "productAvailable": null,
+      "nextPage": "#bc-sf-filter-bottom-pagination li:last-child a"
+    }
+  },
+  "pchub": {
+    "name": "PCHub",
+    "urls": {
+      "home": "https://pchubpricelist.online/",
+      "processor": null,
+      "motherboard": null,
+      "gpu": null,
+      "ram": null,
+      "psu": null,
+      "storage": null
+    },
+    "locators": {
+      "type": "css selector",
+      "processor": "#categoryCon option[value=\"Processor\"]",
+      "motherboard": "#categoryCon option[value=\"Motherboard\"]",
+      "gpu": "#categoryCon option[value=\"GPU\"]",
+      "ram": "#categoryCon option[value=\"RAM\"]",
+      "psu": "#categoryCon option[value=\"PSU\"]",
+      "storage": ["#categoryCon option[value=\"HDD\"]", "#categoryCon option[value=\"SSD\"]"],
+      "productsOnPage": "div.xtable > div > table > tbody > tr",
+      "productName": "td > div > div.divCon1 > h4.nameText",
+      "productPrice": "td > div.divCon3 > div > div.\\36 .box.marginBox > div > div > span.priceTitle > span",
+      "productAvailable": "tr > td.reset-expansion-style > div > div > div > div.textCon > div.stockMargin > h5",
+      "nextPage": "div.py-4.card-footer > nav > nav > ul > ul > li[title=\"next page\"] > a"
+    }
+  }
+}
