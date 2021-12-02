@@ -1,5 +1,5 @@
 # pc-parts-ph
-A Bot that scrapes product information of PC parts being sold in the Philippines.
+A python bot that scrapes product information of PC parts being sold in the Philippines.
 
 ### Websites currently scraping from:
 - https://dynaquestpc.com/
