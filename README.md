@@ -10,7 +10,6 @@ A python bot that scrapes product information of PC parts being sold in the Phil
 - https://pchubpricelist.online/
 
 ### What-to-Do
-
 - Have a config file of PC store websites.
 - Have a config file for the PC parts categories.
     - Figure out the schema for PC parts categories.
@@ -18,7 +17,6 @@ A python bot that scrapes product information of PC parts being sold in the Phil
 - Figure out the schema for products' information
 
 ### Questions
-
 - Use SQL for database? Maybe MongoDB? Time-series Database?
 - Use JSON for product categories?
 - Use JSON for product information?
