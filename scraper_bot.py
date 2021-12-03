@@ -1,12 +1,13 @@
-from selenium.webdriver import Chrome
-from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.relative_locator import locate_with
+import csv
 # from selenium.webdriver.common.by import By
 import json
 import time
-import csv
+
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver import Chrome
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.relative_locator import locate_with
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 def get_product_info(locs, store_id_, store_name_, prod_category, prod_info_list):

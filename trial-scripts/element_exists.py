@@ -1,12 +1,10 @@
 import json
 import time
 
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import Chrome
-from selenium.common.exceptions import NoSuchElementException, WebDriverException, TimeoutException, \
-    ElementClickInterceptedException
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
+
 
 URL = "https://easypc.com.ph/collections/processor-amd"
 with Chrome() as driver:
