@@ -5,7 +5,7 @@ import time
 
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import Chrome
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.relative_locator import locate_with
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -17,7 +17,7 @@ def get_product_info(locs, store_id_, store_name_, prod_category, prod_info_list
     while True:
         # Locate the product elements on the page
         # products_on_page = driver.find_elements(locs["type"], locs["productsOnPage"])
-        products_on_page = wait.until(EC.presence_of_all_elements_located((locs["type"], locs["productsOnPage"])))
+        products_on_page = wait.until(ec.presence_of_all_elements_located((locs["type"], locs["productsOnPage"])))
 
         # For each product in products_on_page, create a dictionary of product info
         for product in products_on_page:
@@ -67,7 +67,7 @@ def get_product_info(locs, store_id_, store_name_, prod_category, prod_info_list
             elif store_id_ == "pchub":
 
                 # Click product WebElement to open more info about the product
-                _prod = wait.until(EC.visibility_of(product))
+                _prod = wait.until(ec.visibility_of(product))
                 driver.execute_script("arguments[0].click();", _prod)
 
                 product_info["name"] = product.find_element(locs["type"], locs["productName"]).text
@@ -153,11 +153,11 @@ for store_id, store_info in store_website.items():
                 if type(locators[product_category]) is list:
                     for category_locator in locators[product_category]:
                         refresh_scroll_top(driver)
-                        wait.until(EC.presence_of_element_located((locators["type"], category_locator))).click()
+                        wait.until(ec.presence_of_element_located((locators["type"], category_locator))).click()
                         get_product_info(locators, store_id, store_name, product_category, product_info_list)
                 else:
                     refresh_scroll_top(driver)
-                    wait.until(EC.presence_of_element_located((locators["type"],
+                    wait.until(ec.presence_of_element_located((locators["type"],
                                                                locators[product_category]))).click()
                     get_product_info(locators, store_id, store_name, product_category, product_info_list)
 
