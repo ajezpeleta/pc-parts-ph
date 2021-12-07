@@ -10,13 +10,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\config-files\PartsCategories.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\config-files\StoreWebsite.csv">
           <value>
             <Attribute>
