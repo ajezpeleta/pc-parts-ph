@@ -15,6 +15,7 @@ A python bot that scrapes product information of PC parts being sold in the Phil
 - ~~Have a config file of PC store websites.~~
 - ~~Have a config file for the PC parts categories.~~
     - ~~Figure out the schema for PC parts categories.~~
+- Accommodate vendor remarks
 - Figure out the schema for products' information
 - Retrieve and encode the products' information into a database.
 
