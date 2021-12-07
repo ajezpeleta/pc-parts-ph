@@ -1,5 +1,4 @@
 import csv
-# from selenium.webdriver.common.by import By
 import json
 import time
 
@@ -11,8 +10,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 def get_product_info(locs, store_id_, store_name_, prod_category, prod_info_list):
-
-    # wait = WebDriverWait(driver, 5)
 
     while True:
         # Locate the product elements on the page
@@ -27,22 +24,16 @@ def get_product_info(locs, store_id_, store_name_, prod_category, prod_info_list
                 "category": prod_category,
                 "name": None,
                 "price": None,
+                "remarks": None,
                 "available": None
             }
+
+            # product_info = dict(zip(key_list, value_list)
 
             # DynaQuestPC data parsing
             if store_id_ == "dynaquestpc":
 
                 product_info["name"] = product.find_element(locs["type"], locs["productName"]).text
-                # _name = _name.split(">")[0].strip()
-                # _name = _name.split("(must")[0].strip()
-                # _name = _name.split("(Must")[0].strip()
-                # _name = _name.replace(",", "")
-                # if _name.endswith("."):
-                #     product_info["name"] = _name.replace(".", "").strip()
-                # else:
-                #     product_info["name"] = _name
-                # print(product_info["name"])
 
                 _price = product.find_element(locs["type"], locs["productPrice"]).text
                 if _price.lower() == "sold out":
@@ -119,8 +110,7 @@ with open("config-files/StoreWebsiteConfig.json", mode='r') as f:
 # Load the ProductInfoTemplate.json config file, then
 # Write the keys into a list
 with open("config-files/ProductInfoTemplate.json", mode='r') as f:
-    _template = json.load(f)
-    product_info_headers = _template.keys()
+    product_info_headers = json.load(f)
 
 # product_info_list will contain the product_info dicts from get_product_info();
 # It will also be used to write to a CSV file
@@ -145,7 +135,7 @@ for store_id, store_info in store_website.items():
         for product_category in product_category_list:
             # Skip the home URL
             # if product_category in ["home", "processor", "motherboard", "gpu", "ram", "psu"]:
-            if product_category in ["home"]:
+            if product_category == "home":
                 continue
 
             # If no Category URL given, use the locator for WebDriver click() activity
