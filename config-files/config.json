@@ -1,27 +1,42 @@
 {
-  "productInfoHeaders": [
-    "store",
-    "category",
-    "name",
-    "price",
-    "remarks",
-    "available"
-  ],
   "vendorList": [
     {
       "id": "dynaquestpc",
       "name": "DynaQuest PC",
       "baseURL": "https://dynaquestpc.com/",
       "productCategory": {
-        "type": "url",
-        "processor": "https://dynaquestpc.com/collections/processor",
-        "motherboard": "https://dynaquestpc.com/collections/motherboard",
-        "gpu": "https://dynaquestpc.com/collections/graphics-card",
-        "ram": "https://dynaquestpc.com/collections/memory",
-        "psu": "https://dynaquestpc.com/collections/power-supply",
-        "storage": "https://dynaquestpc.com/collections/hard-drive",
-        "case": "https://dynaquestpc.com/collections/chassis",
-        "monitor": "https://dynaquestpc.com/collections/displays/monitor"
+        "processor": {
+          "type": "url",
+          "value": "https://dynaquestpc.com/collections/processor"
+        },
+        "motherboard": {
+          "type": "url",
+          "value": "https://dynaquestpc.com/collections/motherboard"
+        },
+        "gpu": {
+          "type": "url",
+          "value": "https://dynaquestpc.com/collections/graphics-card"
+        },
+        "ram": {
+          "type": "url",
+          "value": "https://dynaquestpc.com/collections/memory"
+        },
+        "psu": {
+          "type": "url",
+          "value": "https://dynaquestpc.com/collections/power-supply"
+        },
+        "storage": {
+          "type": "url",
+          "value": "https://dynaquestpc.com/collections/hard-drive"
+        },
+        "case": {
+          "type": "url",
+          "value": "https://dynaquestpc.com/collections/chassis"
+        },
+        "monitor": {
+          "type": "url",
+          "value": "https://dynaquestpc.com/collections/displays/monitor"
+        }
       },
       "onPageSelector": {
         "type": "css selector",
@@ -34,25 +49,48 @@
       }
     },
     {
-      "id": "easypc",
+      "id": "_easypc",
       "name": "EasyPC",
       "baseURL": "https://easypc.com.ph/",
       "productCategory": {
-        "type": "url",
-        "processor": [
-          "https://easypc.com.ph/collections/processor-intel",
-          "https://easypc.com.ph/collections/processor-amd"
-        ],
-        "motherboard": "https://easypc.com.ph/collections/motherboard",
-        "gpu": "https://easypc.com.ph/collections/graphic-card",
-        "ram": "https://easypc.com.ph/collections/memory",
-        "psu": "https://easypc.com.ph/collections/power-supply",
-        "storage": [
-          "https://easypc.com.ph/collections/hard-disk",
-          "https://easypc.com.ph/collections/solid-state-drive"
-        ],
-        "case": "https://easypc.com.ph/collections/pc-case",
-        "monitor": "https://easypc.com.ph/collections/display"
+        "processor": {
+          "type": "url",
+          "value": [
+            "https://easypc.com.ph/collections/processor-intel",
+            "https://easypc.com.ph/collections/processor-amd"
+          ]
+        },
+        "motherboard": {
+          "type": "url",
+          "value": "https://easypc.com.ph/collections/motherboard"
+        },
+        "gpu": {
+          "type": "url",
+          "value": "https://easypc.com.ph/collections/graphic-card"
+        },
+        "ram": {
+          "type": "url",
+          "value": "https://easypc.com.ph/collections/memory"
+        },
+        "psu": {
+          "type": "url",
+          "value": "https://easypc.com.ph/collections/power-supply"
+        },
+        "storage": {
+          "type": "url",
+          "value": [
+            "https://easypc.com.ph/collections/hard-disk",
+            "https://easypc.com.ph/collections/solid-state-drive"
+          ]
+        },
+        "case": {
+          "type": "url",
+          "value": "https://easypc.com.ph/collections/pc-case"
+        },
+        "monitor": {
+          "type": "url",
+          "value": "https://easypc.com.ph/collections/display"
+        }
       },
       "onPageSelector": {
         "type": "css selector",
@@ -69,18 +107,41 @@
       "name": "PCHub",
       "baseURL": "https://pchubpricelist.online/",
       "productCategory": {
-        "type": "css selector",
-        "processor": "#categoryCon option[value=\"Processor\"]",
-        "motherboard": "#categoryCon option[value=\"Motherboard\"]",
-        "gpu": "#categoryCon option[value=\"GPU\"]",
-        "ram": "#categoryCon option[value=\"RAM\"]",
-        "psu": "#categoryCon option[value=\"PSU\"]",
-        "storage": [
-          "#categoryCon option[value=\"HDD\"]",
-          "#categoryCon option[value=\"SSD\"]"
-        ],
-        "case": "#categoryCon option[value=\"Case\"]",
-        "monitor": "#categoryCon option[value=\"Monitor\"]"
+        "processor": {
+          "type": "css selector",
+          "value": "#categoryCon option[value=\"Processor\"]"
+        },
+        "motherboard": {
+          "type": "css selector",
+          "value": "#categoryCon option[value=\"Motherboard\"]"
+        },
+        "gpu": {
+          "type": "css selector",
+          "value": "#categoryCon option[value=\"GPU\"]"
+        },
+        "ram": {
+          "type": "css selector",
+          "value": "#categoryCon option[value=\"RAM\"]"
+        },
+        "psu": {
+          "type": "css selector",
+          "value": "#categoryCon option[value=\"PSU\"]"
+        },
+        "storage": {
+          "type": "css selector",
+          "value": [
+            "#categoryCon option[value=\"HDD\"]",
+            "#categoryCon option[value=\"SSD\"]"
+          ]
+        },
+        "case": {
+          "type": "css selector",
+          "value": "#categoryCon option[value=\"Case\"]"
+        },
+        "monitor": {
+          "type": "css selector",
+          "value": "#categoryCon option[value=\"Monitor\"]"
+        }
       },
       "onPageSelector": {
         "type": "css selector",
@@ -93,6 +154,14 @@
       }
 
     }
+  ],
+  "timeout": 5,
+  "_productInfoHeaders": [
+    "store",
+    "category",
+    "name",
+    "price",
+    "remarks",
+    "available"
   ]
-
 }
