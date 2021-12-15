@@ -1,20 +1,79 @@
-# home_url = 'https://dynaquestpc.com/'
-# category_url = 'https://dynaquestpc.com/collections/processor'
+import sys
+
+from selenium.common.exceptions import WebDriverException
+from selenium.webdriver import Chrome
+
+# this_dict = {
+#     # "product_category": {
+#     #     "processor": {
+#     #         "type": "url",
+#     #         "value": "kjk"
+#     #     },
+#     #     "motherboard": {
+#     #         "type": "css selector",
+#     #         "value": "#categoryCon option[value=\"Motherboard\"]"
+#     #       },
+#     #     "boi": None
+#     # }
+#     "a": [],
+#     "b": "boi"
+# }
 #
-# url_path = category_url.replace(home_url, "")
-# print(url_path)
-# var_str = '.pagination .next a[href*="{url_path}?page="]'
-# locator = var_str.replace("{url_path}", url_path)
-# print(locator)
+# i = [1, 2, 3]
+# j = {1: "hi"}
+# k = None
+#
+# print(all([i, j, k]))
 
-# print("\u20b1")
+a = 1
+if a == 2 or 1:
+    print("hello")
+else:
+    print("oh no")
 
-value = '"Intel Core i9-12900K Processor 30M Cache, up to 5.20 GHz  (Must be purchased with compatible motherboard)"'
-value = value.replace('"', "").split(">")[0].strip()
-value = value.split("(m")[0].strip()
-value = value.split("(M")[0].strip()
-if value.endswith("."):
-    value = value.replace(".", "").strip()
-print(value.split("(M")[0].strip())
+# with Chrome() as driver:
+#     try:
+#         # driver.get("https://djkfjadfj.com")
+#         # raise WebDriverException("LMAO")
+#         err_msg = f'boi boi boi boi ' \
+#                   f'hello hello hello'
+#         raise TypeError(err_msg)
+#     except WebDriverException as e:
+#         e.msg = e.msg + "\nCannot reach URL"
+#         print(e.__dict__)
+#         # driver.close()
+#         sys.exit()
+#     except TypeError as e:
+#         print(e)
 
-# root > div > div > div.appcontent.xcontainer > div > div.prodTablecon > div.col-xl-10 > div > div:nth-child(1) > div.xtable > div > table > tbody > tr:nth-child(1) > td:nth-child(4) > div > div > div.\36 .box.marginBox > div > div:nth-child(1) > span > span
+
+print("END")
+#
+#     for category_name, category_info in product_category.items():
+#         if category_info["type"] == "url":
+#             try:
+#                 if type(category_info["value"]) is str:
+#                     driver.get(category_info["value"])
+#                 elif type(category_info["value"]) is list:
+#                     for _url in category_info["value"]:
+#                         driver.get(_url)
+#             except WebDriverException as yo:
+#                 print(yo)
+#             else:
+#                 continue
+#         elif category_info["type"] == "css selector":
+#             try:
+#                 if type(category_info["value"]) is str:
+#                     # driver.get(category_info["value"])
+#                     print(category_info["value"])
+#                 elif type(category_info["value"]) is list:
+#                     for _url in category_info["value"]:
+#                         # driver.get(_url)
+#                         print(category_info["value"])
+#             except WebDriverException as yo:
+#                 print(yo)
+#             else:
+#                 raise TypeError
+#         elif category_info["type"] == "xpath":
+#             pass
+
